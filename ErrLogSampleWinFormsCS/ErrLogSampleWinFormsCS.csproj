@@ -37,11 +37,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ELDataClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\errlog.io.1.1.8\lib\net45\ELDataClass.dll</HintPath>
+    <Reference Include="ELDataClass, Version=2017.10.23.2923, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\errlog.io.1.1.10\lib\net45\ELDataClass.dll</HintPath>
     </Reference>
-    <Reference Include="ErrLog, Version=2017.10.20.2892, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\errlog.io.1.1.8\lib\net45\ErrLog.dll</HintPath>
+    <Reference Include="ErrLog, Version=2017.10.23.2923, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\errlog.io.1.1.10\lib\net45\ErrLog.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
