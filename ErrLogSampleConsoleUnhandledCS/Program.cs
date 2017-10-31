@@ -3,7 +3,7 @@
 namespace ErrLogSampleConsoleUnhandled {
     class Program {
         static void Main(string[] args) {
-            ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+            ErrLog.settings.apikey = "[your api key]";
 
             AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionCatcher;
 

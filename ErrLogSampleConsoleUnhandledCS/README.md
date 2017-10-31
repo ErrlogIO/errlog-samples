@@ -18,7 +18,7 @@ Add your `apikey` to the Main method of Program.cs file.
 
 ```
 static void Main() {
-    ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+    ErrLog.settings.apikey = "[your api key]";
     AppDomain.CurrentDomain.UnhandledException += MyHandler;
 
     Application.EnableVisualStyles();
@@ -98,7 +98,7 @@ This will catch any exceptions that cause the web applicaiton to stop. If there'
 This is your personal apikey used to associate your log messages with your ErrLog.IO account. If this is unset requests will receive a message "Missing API Key".
 
 ```
-Errlog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+Errlog.settings.apikey = "[your api key]";
 ```
 
 #### ErrLog.settings.key_check

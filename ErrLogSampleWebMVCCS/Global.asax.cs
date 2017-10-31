@@ -7,7 +7,7 @@ namespace ErrLogSampleWebMVCCS {
         protected void Application_Start() {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+            ErrLog.settings.apikey = "[your api key]";
         }
         protected void Application_Error() {
             Exception ex = Server.GetLastError().GetBaseException();

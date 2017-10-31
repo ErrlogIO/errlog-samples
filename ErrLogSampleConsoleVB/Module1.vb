@@ -18,7 +18,7 @@ q) Quit
         ErrLog.logger.log(ex)
     End Sub
     Sub Main(args As String())
-        ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF"
+        ErrLog.settings.apikey = "[your api key]"
         AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf UnhandledExceptionCatcher
 
         PrintHelp()

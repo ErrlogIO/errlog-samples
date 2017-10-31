@@ -16,7 +16,7 @@ Add your `apikey` to the Main method of Program.vb file.
 
 ```
 Sub Main(args As String())
-    ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF"
+    ErrLog.settings.apikey = "[your api key]"
     AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf UnhandledExceptionCatcher
 End Sub
 ```
@@ -91,7 +91,7 @@ End Try
 This is your personal apikey used to associate your log messages with your ErrLog.IO account. If this is unset requests will receive a message "Missing API Key".
 
 ```
-Errlog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+Errlog.settings.apikey = "[your api key]";
 ```
 
 #### ErrLog.settings.key_check

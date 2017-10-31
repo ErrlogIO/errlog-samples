@@ -17,7 +17,7 @@ Add your `apikey` to the Main method of Program.fs file.
 ```
 [<EntryPoint>]
 let main argv = 
-    ErrLog.settings.apikey <- @"12345678-90AB-CDEF-1234-567890ABCDEF";
+    ErrLog.settings.apikey <- @"[your api key]";
 ```
 
 You can apparently add a handler for the UnhandledException event but it's a bit complicated to do in F#. Your best options are to:
@@ -71,7 +71,7 @@ try {
 This is your personal apikey used to associate your log messages with your ErrLog.IO account. If this is unset requests will receive a message "Missing API Key".
 
 ```
-Errlog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+Errlog.settings.apikey = "[your api key]";
 ```
 
 #### ErrLog.settings.key_check

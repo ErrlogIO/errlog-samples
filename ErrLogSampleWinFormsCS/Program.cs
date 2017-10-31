@@ -8,7 +8,7 @@ namespace ErrLogSampleWinFormsCS {
         /// </summary>
         [STAThread]
         static void Main() {
-            ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+            ErrLog.settings.apikey = "[your API key]";
             AppDomain.CurrentDomain.UnhandledException += MyHandler;
 
             Application.EnableVisualStyles();

@@ -8,7 +8,7 @@ open System.Data.SqlClient;
 
 [<EntryPoint>]
 let main argv = 
-    ErrLog.settings.apikey <- @"12345678-90AB-CDEF-1234-567890ABCDEF";
+    ErrLog.settings.apikey <- @"[your api key]";
     
     let PrintHelp  = 
         printfn "1) Display Hello, World!\n\

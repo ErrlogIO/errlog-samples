@@ -7,7 +7,7 @@ Public Class MvcApplication
     Protected Sub Application_Start()
         AreaRegistration.RegisterAllAreas()
         RouteConfig.RegisterRoutes(RouteTable.Routes)
-        ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF"
+        ErrLog.settings.apikey = "[your api key]"
     End Sub
 
     Protected Sub Application_Error(sender As Object, e As EventArgs)

@@ -96,7 +96,7 @@ try {
 This is your personal apikey used to associate your log messages with your ErrLog.IO account. If this is unset requests will receive a message "Missing API Key".
 
 ```
-Errlog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
+Errlog.settings.apikey = "[your API key]";
 ```
 
 #### ErrLog.settings.key_check

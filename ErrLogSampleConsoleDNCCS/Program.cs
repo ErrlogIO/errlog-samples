@@ -24,7 +24,7 @@ namespace ErrLogSampleConsoleDNCCS {
 
                 var obj = new {
                     message = "This is a test message",
-                    apikey = "12345678-90AB-CDEF-1234-567890ABCDEF",
+                    apikey = "[your API key]",
                     applicationname = "Test Application",
                     type = ex.GetType().ToString(),
                     environment = Environment.GetEnvironmentVariables(),

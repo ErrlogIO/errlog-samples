@@ -3,7 +3,7 @@ Public Class Global_asax
     Inherits HttpApplication
 
     Protected Sub Application_Start(sender As Object, e As EventArgs)
-        ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF"
+        ErrLog.settings.apikey = "[your api key]"
     End Sub
 
     Protected Sub Application_Error(sender As Object, e As EventArgs)

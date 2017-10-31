@@ -5,7 +5,7 @@ Public Class WebApiApplication
 
     Protected Sub Application_Start()
         GlobalConfiguration.Configure(AddressOf WebApiConfig.Register)
-        ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF"
+        ErrLog.settings.apikey = "[your api key]"
     End Sub
     Protected Sub Application_Error(sender As Object, e As EventArgs)
         Dim ex As Exception = Server.GetLastError().GetBaseException()
