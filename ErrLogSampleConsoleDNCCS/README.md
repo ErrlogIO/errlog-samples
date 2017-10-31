@@ -1,27 +1,27 @@
 ﻿## Synopsis
 
-This project will show you how to use ErrLog.IO in a .Net Framework (C#) console project to catch and log exception errors.
+This project shows how to use the ErrLog.IO webhook API to log errors from projects that don't 
+support the Nuget package.
 
 ## Installation
 
-Simply install the ErrLog.IO nuget package from Visual Studio's Package Manager Console
+No installation is required as you're not relying on external packages. You just need to 
+reference standard .Net Framework classes.
 
-```
-PM> Install-Package ErrLog.IO
-```
+In the example below we use Newtonsoft.Json to serialize the object into a Json string, 
+however this isn't required and you can use your own (or alternative) method for 
+serializing to JSON.
 
 ## Configuration
 
-Add your `apikey` to the Main method of Program.cs file.
+You'll need to specify your API key in your handler code, but that's about it. Depending on 
+how you want to handle the errors, you can either create a separate function to handle 
+exceptions which you can reference in try/catch statements or set an application-wide 
+UnhandledException handler as shown below.
 
 ```
 static void Main() {
-    ErrLog.settings.apikey = "12345678-90AB-CDEF-1234-567890ABCDEF";
     AppDomain.CurrentDomain.UnhandledException += MyHandler;
-
-    Application.EnableVisualStyles();
-    Application.SetCompatibleTextRenderingDefault(false);
-    Application.Run(new Form1());
 }
 ```
 
@@ -30,45 +30,46 @@ Create the `MyHandler` method referenced above to catch any unhandled exceptions
 ```
 static void MyHandler(object sender, UnhandledExceptionEventArgs args) {
     Exception ex = args.ExceptionObject as Exception;
-    ErrLog.logger.log(ex);
+   
+    // Exception handling code, similar to below.
 }
 ```
 
 ## Usage
 
-The hard work has already been done. The application will now catch and log all unhandled exceptions. 
-
-As it is an unhandled exception it will be the last thing the application does before it dies. It means 
-you won't be able to retain information from the ErrLog environment, which will all be reinitialized the 
-next time the application starts. 
-
-One of the most useful features of ErrLog.IO is that you can manually handle exceptions and log them with try/catch blocks.
-
-For example
+The example below manually forces a NullReference exception. You'll have to create your own Json message
 ```
-...
 try {
-    potentiallyNullableVariable.value;
+    Console.WriteLine("We're going to throw an exception that will be handled by a try/catch statement.");
+
+    string result = null;
+    string upper = result.ToUpper();
 } catch (Exception ex) {
-    Errlog.logger.log(ex);
+    StackTrace st = new StackTrace(ex, true);
+
+    var obj = new {
+        message = "This is a test message",
+        apikey = "[Your API key]",
+        applicationname = "Test Application",
+        type = ex.GetType().ToString(),
+        environment = Environment.GetEnvironmentVariables(),
+        errordate = DateTime.Now,
+        trace = ex.StackTrace,
+        filename = st.GetFrame(0).GetFileName(),
+        method = st.GetFrame(0).GetMethod().Name,
+        lineno = st.GetFrame(0).GetFileLineNumber().ToString(),
+        colno = st.GetFrame(0).GetFileColumnNumber().ToString(),
+    };
+
+    StringContent content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
+
+    HttpClient client = new HttpClient();
+
+    // You can capture the response if you are expecting a result. 
+    // Most of the time this will be "OK" but could also be "Missing API Key", etc.
+    HttpContent response = client.PostAsync(apiUrl, content).Result.Content;
+    string result = response.ReadAsStringAsync().Result;
 }
-...
-```
-
-This will catch and log the exception, while continuing the execution as you normally would.
-
-If desired you can also access the return value of the `log(ex)` method if you are experiencing issues.
-
-```
-...
-try {
-    potentiallyNullableVariable.value;
-} catch (Exception ex) {
-    string response = Errlog.logger.log(ex);
-
-    // Response will be "OK", "Missing API Key", etc.
-}
-...
 ```
 
 ## API Reference
@@ -250,7 +251,7 @@ Errlog.settings.logging_verbose = false;
 
 ### See also
 
-For full documentation see our webiste: https://errlog.io/docs/getting-started
+For full documentation see our webiste: https://errlog.io/docs/getting-started. You can also check out the full [webhook API](https://errlog.io/docs/webhook-api) documentation.
 
 ## License
 

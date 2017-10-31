@@ -69,10 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ELDataClass">
-      <HintPath>..\packages\errlog.io.1.1.10\lib\net45\ELDataClass.dll</HintPath>
+      <HintPath>..\packages\errlog.io.1.1.17\lib\net45\ELDataClass.dll</HintPath>
     </Reference>
     <Reference Include="ErrLog">
-      <HintPath>..\packages\errlog.io.1.1.10\lib\net45\ErrLog.dll</HintPath>
+      <HintPath>..\packages\errlog.io.1.1.17\lib\net45\ErrLog.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core">

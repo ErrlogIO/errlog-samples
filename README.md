@@ -1,6 +1,6 @@
 ## ErrLog.IO Samples
 
-These are samples to show how the ErrLog.IO Nuget package can be used to add logging and exception handling to a .Net project.
+These are samples to show how the ErrLog.IO Nuget package and webhook API can be used to add logging and exception handling to a .Net project.
 
 ## Installation
 
@@ -17,9 +17,8 @@ The samples include examples in:
 * VB
 * even F# (console application only)
 
-dotnet core examples will be coming in future updates.
-
-The example scenarios include:
+### Nuget Usage Examples
+The Nuget Package example scenarios include:
 * ASP.NET WebForms ([C#](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebWebFormsCS),[VB](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebWebFormsVB))
 * ASP.NET MVC ([C#](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebMVCCS),[VB](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebMVCVB))
 * ASP.NET WebApi ([C#](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebApiCS),[VB](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebApiVB))
@@ -27,8 +26,14 @@ The example scenarios include:
 * Console App using an unhandled exception event. ([C#](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleConsoleUnhandledCS) only)
 * WinForms ([C#](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWinFormsCS) only)
 
+### Webhook API examples
+
+The webhook API examples are:
+* Console App ([C# dotnet core](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleWebMVCCS),[VB](https://github.com/ErrlogIO/errlog-samples/tree/master/ErrLogSampleConsoleDNCCS))
+
 ## Helpful links
 
 * [ErrLog.IO homepage](https://errlog.io)
 * [ErrLog.IO documentation](https://errlog.io/docs)
+* [ErrLog.IO webhook API documentation](https://errlog.io/docs/webhook-api)
 * [ErrLog.IO nuget package](https://www.nuget.org/packages/errlog.io/)
