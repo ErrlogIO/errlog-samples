@@ -10,7 +10,6 @@ using Newtonsoft.Json.Linq;
 
 namespace ErrLogSampleConsoleDNCCS {
     class Program {
-        //    private static string apiUrl => "http://localhost:52967/api/v1/log";
         private static string apiUrl => "https://relay.errlog.io/api/v1/log";
 
         static void Main(string[] args) {

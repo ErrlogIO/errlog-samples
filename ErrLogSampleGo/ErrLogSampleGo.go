@@ -7,7 +7,6 @@ import ("net/http"
 
 func main() {
      url := "https://relay.errlog.io/api/v1/log"
-   //  url := "http://localhost:52967/logcap"
     fmt.Println("URL:>", url)
 
 
