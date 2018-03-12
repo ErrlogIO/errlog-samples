@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tslint.json" />
+    <None Include="karma.conf.js" />
+    <None Include="package.json" />
+    <None Include="protractor.conf.js" />
+    <None Include="README.md" />
+    <None Include="tsconfig.json" />
+    <None Include=".angular-cli.json" />
+    <None Include=".editorconfig" />
+    <None Include=".gitignore" />
+    <None Include="src\typings.d.ts" />
+    <None Include="src\index.html" />
+    <None Include="src\main.ts" />
+    <None Include="src\polyfills.ts" />
+    <None Include="src\styles.css" />
+    <None Include="src\test.ts" />
+    <None Include="src\tsconfig.app.json" />
+    <None Include="src\tsconfig.spec.json" />
+    <None Include="src\environments\environment.prod.ts" />
+    <None Include="src\environments\environment.ts" />
+    <None Include="src\assets\.gitkeep" />
+    <None Include="src\app\app.component.css" />
+    <None Include="src\app\app.component.html" />
+    <None Include="src\app\app.component.spec.ts" />
+    <None Include="src\app\app.component.ts" />
+    <None Include="src\app\app.module.ts" />
+    <None Include="e2e\app.e2e-spec.ts" />
+    <None Include="e2e\app.po.ts" />
+    <None Include="e2e\tsconfig.e2e.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\favicon.ico" />
+  </ItemGroup>
+</Project>
