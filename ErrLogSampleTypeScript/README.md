@@ -20,11 +20,11 @@ In this example we use the `AppModule` constructor to do all the hard work, pure
 
 To include the files in the solution I created a generic C++ project in Visual Studio. This was because it was a minimalist project type and it won't be compiled from within Visual Studio.
 
-![Create a VS project]((https://errlog.io/images/docs/typescript-create-vs-project.png)
+![Create a VS project](https://errlog.io/images/docs/typescript-create-vs-project.png)
 
 Then from the folder where your newly created project is hosted run `ng new [project_name]` to create the project files. This will take a minute or two.
 
-![Create an angular project]((https://errlog.io/images/docs/typescript-create-ng-project.png)
+![Create an angular project](https://errlog.io/images/docs/typescript-create-ng-project.png)
 
 And you'll need to install some `npm` packages
 
@@ -32,7 +32,7 @@ And you'll need to install some `npm` packages
 
 Your project should now look like this:
 
-![Project Created]((https://errlog.io/images/docs/typescript-project-created.png)
+![Project Created](https://errlog.io/images/docs/typescript-project-created.png)
 
 
 ## tsconfig.json
